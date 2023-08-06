@@ -1,0 +1,58 @@
+@charset "utf-8";
+
+/* coundown倒计时样式集 */
+.countdown {
+  height: 280px;
+  text-align: center;
+  line-height: 1;
+  /* background-size: 240px; */
+  /* float: left; */
+  overflow: hidden;
+}
+
+.countdown .today {
+  font-size: 16px;
+  margin: 12px auto;
+}
+
+.countdown .title {
+  font-size: 28px;
+}
+
+.countdown .deadline {
+  margin-top: 20%;
+  font-size: 14px;
+  text-align: right;
+  margin-right: 10px;
+}
+
+.countdown small {
+  font-size: 17px;
+}
+
+.countdown .clock {
+  width: 142px;
+  margin: 12px auto 0;
+  overflow: hidden;
+}
+
+.countdown .clock span,
+.countdown .clock i {
+  display: block;
+  text-align: center;
+  line-height: 34px;
+  font-size: 23px;
+  float: left;
+}
+
+.countdown .clock span {
+  width: 34px;
+  height: 34px;
+  border-radius: 2px;
+  background-color: #696d69;
+}
+
+.countdown .clock i {
+  width: 20px;
+  font-style: normal;
+}

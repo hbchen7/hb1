@@ -1,0 +1,39 @@
+@charset "utf-8";
+
+body {
+  margin: 0;
+  height: 100vh;
+  background-color: #eee;
+}
+/* * {
+        border: 1px solid black;
+      } */
+.flex {
+  display: flex;
+}
+.column {
+  flex-direction: column;
+}
+.flex1 {
+  flex: 1;
+}
+.white {
+  background-color: white;
+}
+/* 列表项 */
+.h140 {
+  height: 140px;
+}
+.mg8 {
+  margin: 8px;
+}
+.mgr8 {
+  margin-right: 8px;
+}
+.mgt8 {
+  margin-top: 8px;
+}
+.yinying {
+  box-shadow: rgb(0 0 0/ 20%) 0px 2px 1px -1px, rgb(0 0 0 / 14%) 0px 1px 1px 0px,
+    rgb(0 0 0 / 12%) 0px 1px;
+}
