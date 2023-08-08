@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta charset="utf-8" />
+    <title>当前要事-元岛作业</title>
+
+    <style>
+      body {
+        margin: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        background-image: url("https://s1.ax1x.com/2023/08/08/pPVn6BQ.jpg");
+        background-size: cover;
+        background-position: center center;
+        background-repeat: no-repeat;
+      }
+      .box {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      #inputBox {
+        border: 0;
+        border-bottom: 2px solid #303429;
+        padding: 4px 2px;
+        display: block;
+        background: 0;
+        line-height: 1.5;
+        outline: none;
+        text-align: center;
+        transition: border-color 0.2s ease-in-out;
+        border-radius: 0;
+        color: #303429;
+        font-size: 2rem;
+        max-width: 90%;
+      }
+
+      #botton {
+        margin-left: -50px;
+        margin-right: 10px;
+        color: #303429;
+        border-radius: 50%;
+        height: 40px;
+        width: 40px;
+        text-align: center;
+        line-height: 30px;
+        cursor: pointer;
+      }
+
+      input::placeholder {
+        color: #303429;
+      }
+      input::-webkit-input-placeholder {
+        color: #303429;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="box">
+      <input placeholder="最重要的事？" id="inputBox" />
+      <span id="botton" onclick="change()">✔</span>
+    </div>
+    <script>
+      let youShi = false;
+
+      function change() {
+        let botton = document.getElementById("botton");
+        let inputBox = document.getElementById("inputBox");
+
+        if (youShi) {
+          youShi = false;
+          botton.innerText = "✔";
+          inputBox.style.borderBottomColor = "#fff";
+          inputBox.value = "";
+          inputBox.readOnly = false;
+          localStorage.removeItem("shi");
+        } else {
+          youShi = true;
+          botton.innerText = "✘";
+          inputBox.style.borderBottomColor = "transparent";
+          inputBox.readOnly = true;
+          localStorage.setItem("shi", inputBox.value);
+        }
+      }
+      let data = localStorage.getItem("shi");
+      if (data) {
+        document.getElementById("inputBox").value = data;
+        change();
+      }
+    </script>
+  </body>
+</html>
